@@ -27,7 +27,6 @@ public class EmployeeLeave {
     @Size(max = 200, message = "Reason cannot be more than 200 characters")
     private String reason;
 
-    // PENDING when applied, later APPROVED or REJECTED
     private String status = "PENDING";
 
     public EmployeeLeave() {}
