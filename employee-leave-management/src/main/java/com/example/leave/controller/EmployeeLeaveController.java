@@ -31,13 +31,11 @@ public class EmployeeLeaveController {
         return service.getAllLeaves();
     }
 
-    // Example: GET /leaves/search?name=Ravi
     @GetMapping("/search")
     public List<EmployeeLeave> searchByEmployeeName(@RequestParam String name) {
         return service.getLeavesByEmployeeName(name);
     }
 
-    // Body example: {"status": "APPROVED"}
     @PatchMapping("/{id}/status")
     public EmployeeLeave updateStatus(@PathVariable Long id,
                                       @RequestBody Map<String, String> request) {
